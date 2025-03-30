@@ -7,6 +7,15 @@ plugins {
     id "io.sentry.jvm.gradle" version '5.3.0'
     id 'jacoco'
     id 'java'
+    id "org.sonarqube" version "6.0.1.5171"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "inspecsteur-moustache_megamek"
+    property "sonar.organization", "inspecsteur-moustache"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 java {
